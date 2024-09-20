@@ -62,11 +62,16 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--secondary);
   color: var(--white);
-  border: 1px solid #ffffff22;
   border-radius: 100px;
   padding: 8px 8px 8px 24px;
+  z-index: 3;
+  /* From https://css.glass */
+background: #2225225b;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .logo{
@@ -129,12 +134,13 @@ nav button:hover{
 #headis h1 {
   font-size: 40px;
   color: var(--white);
+  text-align: center;
 }
 
 #headis p {
   font: 16px/1.6 400;
   color: var(--gray);
-  width: 600px;
+  max-width: 600px;
   text-align: center;
 }
 .pricing-cards {
@@ -323,4 +329,46 @@ border: 1px solid #e4e4e45c;
     
   }
  }
- 
+
+
+/* Adjust pricing cards for smaller screens */
+@media screen and (max-width: 1000px) {
+ .circle{
+  display: none;
+ }
+ .menu{
+  display: none;
+ }
+ nav{
+  width: 80%;
+ }
+ .pricing-cards{
+  flex-wrap: wrap;
+ }
+ #main::after{
+display: none;
+}
+
+.booknow{
+  width: 80%;
+}
+.booknow button{
+  padding: 1rem 2rem;
+  font:16px/1.6;
+}
+#headis {
+  width: 70%;
+}
+
+#
+}
+
+@media screen and (max-width: 600px) {
+  .card{
+    width: 90%;
+  }
+  .booknow{
+    flex-direction: column;
+    text-align: center;
+  }
+}
