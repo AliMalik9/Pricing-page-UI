@@ -107,6 +107,10 @@ nav button {
   font-weight: 500;
   font-size: 16px;
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+nav button:hover{
+  box-shadow: 1px 3px 20px 0px #a6fb89;
 }
 
 #headis {
@@ -150,7 +154,6 @@ nav button {
   text-align: center;
   transition: all 0.3s ease;
   cursor: pointer;
-
   &:nth-child(2) {
     border: 3px solid transparent; /* Transparent border */
     background-clip: padding-box, border-box; /* Clip background to border box */
@@ -254,6 +257,7 @@ nav button {
 .booknow h2{
   color: var(--white);
 }
+
 .booknow button{
   background-color: var(--primary);
   box-shadow: 1px 3px 20px 0px #49763B;
@@ -265,9 +269,16 @@ nav button {
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.booknow button:hover{
+  box-shadow: 1px 3px 20px 0px #1b460e;
+}
+
 .circle{
 position: absolute;
+z-index: 5;
 border-radius: 50%;
 background: rgba(228, 228, 228, 0.075);
 backdrop-filter: blur(4px);
