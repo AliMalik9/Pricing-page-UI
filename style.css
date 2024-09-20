@@ -66,34 +66,29 @@ nav {
   border-radius: 100px;
   padding: 8px 8px 8px 24px;
   z-index: 3;
-  /* From https://css.glass */
-background: #2225225b;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+  background: var(--secondary);
 }
 
-.logo{
+.logo {
   cursor: pointer;
 }
 
 .menu {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   color: var(--gray);
 }
 
-nav .menu p{
+nav .menu p {
   cursor: pointer;
   transition: all 0.3s ease;
+  padding: 4px 12px;
 }
 
-nav .menu p:hover{
+nav .menu p:hover {
   cursor: pointer;
   background-color: var(--bgcolor);
-  padding: 4px 12px;
   border-radius: 100px;
   color: white;
 }
@@ -118,7 +113,8 @@ nav button {
   cursor: pointer;
   transition: box-shadow 0.3s ease;
 }
-nav button:hover{
+
+nav button:hover {
   box-shadow: 1px 3px 20px 0px #a6fb89;
 }
 
@@ -143,16 +139,20 @@ nav button:hover{
   max-width: 600px;
   text-align: center;
 }
+
 .pricing-cards {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   margin-top: 3rem;
+  flex-wrap: wrap;
+  padding: 0 2rem;
 }
 
 .card {
-  background-color: var(--secondary); /* Set the background color here */
+  background-color: var(--secondary);
+  /* Set the background color here */
   border-radius: 3rem;
   padding: 2.4rem;
   height: fit-content;
@@ -164,17 +164,23 @@ nav button:hover{
   text-align: center;
   transition: all 0.3s ease;
   cursor: pointer;
+
   &:nth-child(2) {
-    border: 3px solid transparent; /* Transparent border */
-    background-clip: padding-box, border-box; /* Clip background to border box */
-    background-origin: border-box; /* Background origin set to border box */
+    border: 3px solid transparent;
+    /* Transparent border */
+    background-clip: padding-box, border-box;
+    /* Clip background to border box */
+    background-origin: border-box;
+    /* Background origin set to border box */
     background-image: linear-gradient(var(--secondary), var(--secondary)),
       linear-gradient(140deg, var(--primary), var(--secondary));
   }
 }
+
 .card:hover {
   transform: translateY(-10px) scale(1.05);
-  &:nth-child(2){
+
+  &:nth-child(2) {
     box-shadow: 0 8px 12px #96ff7314;
   }
 }
@@ -202,6 +208,7 @@ nav button:hover{
   color: var(--gray);
   font-weight: 400;
 }
+
 .card p.referral span {
   color: var(--primary);
   font-weight: 700;
@@ -212,6 +219,7 @@ nav button:hover{
   margin-top: 3rem;
   color: var(--white);
 }
+
 .card ul {
   list-style: none;
   padding: 1rem 1rem 1rem 2rem;
@@ -241,6 +249,7 @@ nav button:hover{
   padding: 0.2rem;
   color: var(--gray);
 }
+
 .recommended {
   background-color: #a6fb8955;
   color: var(--primary);
@@ -251,24 +260,25 @@ nav button:hover{
   margin: 2rem auto 0 auto;
 }
 
-.booknow{
+.booknow {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: 4rem;
-  width: 1144px;
+  margin: 4rem 0;
+  width: 60%;
   height: fit-content;
   background: #a6fb8955;
   padding: 1rem 1.1rem 1rem 2rem;
   border-radius: 2rem;
+
 }
 
-.booknow h2{
+.booknow h2 {
   color: var(--white);
 }
 
-.booknow button{
+.booknow button {
   background-color: var(--primary);
   box-shadow: 1px 3px 20px 0px #49763B;
   border: none;
@@ -282,92 +292,109 @@ nav button:hover{
   transition: all 0.3s ease;
 }
 
-.booknow button:hover{
+.booknow button:hover {
   box-shadow: 1px 3px 20px 0px #1b460e;
 }
 
-.circle{
-position: absolute;
-z-index: 5;
-border-radius: 50%;
-background: rgba(228, 228, 228, 0.075);
-backdrop-filter: blur(4px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid #e4e4e45c;
-&:nth-child(1){
-  height: 150px;
-  width: 150px;
-  top: 5%;
-  left: 8%;
-}
-&:nth-child(2){
-  height: 90px;
-  width: 90px;
-  top: 30%;
-  right: 10%;
-  background: linear-gradient(135deg, hsla(71, 79%, 42%, 0.4) 0%, hsla(0, 0%, 89%, 0.01) 100%);
-}
-&:nth-child(3){
-  height: 100px;
-  width: 100px;
-  top: 50%;
-  left: 16%;
-  background: linear-gradient(135deg, hsla(71, 79%, 42%, 0.4) 0%, hsla(0, 0%, 89%, 0.01) 100%);
+.circle {
+  position: absolute;
+  z-index: 5;
+  border-radius: 50%;
+  background: rgba(228, 228, 228, 0.075);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid #e4e4e45c;
 
-}
-&:nth-child(4){
-  height: 200px;
-  width: 200px;
-  bottom: 6%;
-  right: -2%;
-}
+  &:nth-child(1) {
+    height: 150px;
+    width: 150px;
+    top: 5%;
+    left: 8%;
+  }
+
+  &:nth-child(2) {
+    height: 90px;
+    width: 90px;
+    top: 30%;
+    right: 10%;
+    background: linear-gradient(135deg, hsla(71, 79%, 42%, 0.4) 0%, hsla(0, 0%, 89%, 0.01) 100%);
+  }
+
+  &:nth-child(3) {
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    left: 15%;
+    background: linear-gradient(135deg, hsla(71, 79%, 42%, 0.4) 0%, hsla(0, 0%, 89%, 0.01) 100%);
+
+  }
+
+  &:nth-child(4) {
+    height: 200px;
+    width: 200px;
+    bottom: 6%;
+    right: -2%;
+  }
 }
 
 @media screen and (max-width: 1440px) {
-  .circle:nth-child(3){
+  .circle:nth-child(3) {
     display: none;
-    
+
   }
- }
+}
 
 
 /* Adjust pricing cards for smaller screens */
 @media screen and (max-width: 1000px) {
- .circle{
-  display: none;
- }
- .menu{
-  display: none;
- }
- nav{
-  width: 80%;
- }
- .pricing-cards{
-  flex-wrap: wrap;
- }
- #main::after{
-display: none;
-}
+  .circle {
+    display: none;
+  }
 
-.booknow{
-  width: 80%;
-}
-.booknow button{
-  padding: 1rem 2rem;
-  font:16px/1.6;
-}
-#headis {
-  width: 70%;
-}
+  .menu {
+    display: none;
+  }
 
-#
+  nav {
+    width: 80%;
+    background: #2225225b;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid #22252255;
+  }
+
+  .pricing-cards {
+
+    padding: 0;
+  }
+
+  #main::after {
+    display: none;
+  }
+
+  .booknow {
+    width: 80%;
+  }
+
+  .booknow button {
+    padding: 1rem 2rem;
+    font: 16px/1.6;
+  }
+
+  #headis {
+    width: 70%;
+  }
+
+  #
 }
 
 @media screen and (max-width: 600px) {
-  .card{
+  .card {
     width: 90%;
   }
-  .booknow{
+
+  .booknow {
     flex-direction: column;
     text-align: center;
   }
