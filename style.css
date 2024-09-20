@@ -78,7 +78,17 @@ nav {
 
 nav .menu p{
   cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+nav .menu p:hover{
+  cursor: pointer;
+  background-color: var(--bgcolor);
+  padding: 4px 12px;
+  border-radius: 100px;
+  color: white;
+}
+
 nav .menu p.active {
   background-color: var(--bgcolor);
   padding: 4px 12px;
@@ -262,7 +272,7 @@ border-radius: 50%;
 background: rgba(228, 228, 228, 0.075);
 backdrop-filter: blur(4px);
 -webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(228, 228, 228, 0.36);
+border: 1px solid #e4e4e45c;
 &:nth-child(1){
   height: 150px;
   width: 150px;
@@ -295,5 +305,7 @@ border: 1px solid rgba(228, 228, 228, 0.36);
 @media screen and (max-width: 1440px) {
   .circle:nth-child(3){
     display: none;
+    
   }
  }
+ 
